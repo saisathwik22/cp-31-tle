@@ -10,6 +10,8 @@
 // when k > 1, its not necessary that sorting will only be possible with reversal of k length subarrays
 // subarray length can be any number between 2 and k inclusive.
 
+// TC : O(nlogn) SC : O(n)
+
 #include<bits/stdc++.h>
 using namespace std;
 
