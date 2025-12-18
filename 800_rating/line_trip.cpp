@@ -5,7 +5,7 @@
 // 1 litre of fuel per 1 unit distance
 // no gas stations at points 0 and x
 
-// approach
+// my approach
 // take max_fuel as 2*x and currFuel count starting from max_fuel 2*x
 // store gas station points in set to check for the existence later.
 // ans variable will track least fuel count reached while traveling from 0 to x and x to 0
@@ -49,3 +49,36 @@ int main() {
 // inserting elements into set n*logn in worst case
 // Total TC : O(n*logn + x)
 // Space Complexity : O(n)
+
+// other approach
+// push 0 to the first of points array and x to the last
+// max(distances between points) is the ans
+// example : [0, 1, 2, 5, 7]
+// 5 to 7 dist is 2, 7 to 5 dist is 2, so 4
+// differences : (1, 1, 3, 4)
+// max : 4 (ans)
+
+long long n, x;
+cin >> n >> x;
+vector<long long> points;
+points.push_back(0);
+for(int i = 0; i < n; i++) {
+  long long point;
+  cin >> point;
+  points.push_back(point);
+}
+points.push_back(x);
+n = points.size();
+
+long long max_dist = INT_MIN;
+for(int i = 1; i < n; i++) {
+  if(i == n - 1) {
+    max_dist = max(max_dist, 2 * (points[i] - points[i - 1]));
+  }
+  else {
+    max_dist = max(max_dist, points[i] - poinst[i-1]);
+  }
+}
+cout << max_dist << endl;
+
+// TC : O(n) SC : O(n)
