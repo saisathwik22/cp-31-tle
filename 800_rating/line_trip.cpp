@@ -44,3 +44,8 @@ int main() {
     cout << (fuel - ans) << endl;
   }
 }
+
+// Time Complexity:
+// inserting elements into set n*logn in worst case
+// Total TC : O(n*logn + x)
+// Space Complexity : O(n)
