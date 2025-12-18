@@ -15,3 +15,4 @@ int main() {
     }
     return 0;
 }
+// or if n%3 == 0 second wins, else first wins
