@@ -10,6 +10,20 @@
 // from 7 jump to 10, distance 3 not divisible by k=2
 // moves are : 7 3
 
+
+// simple code
+input x, k;
+if(x % k == 0) {
+  cout << 2 << endl;
+  cout << 1 << " " << x - 1 << endl;
+}
+else {
+  cout << 1 << endl;
+  cout << x << endl;
+}
+
+
+// my approach
 input x, k;
 if (x < k) {
   cout << 1 << endl;
@@ -24,7 +38,7 @@ else {
   if(d % k == 0) {
     d--;
     cout << 2 << endl;
-    cout << d << " " << x-d << endl;
+    cout << d << " " << 1 << endl;
   }
   else {
     cout << 1 << endl;
